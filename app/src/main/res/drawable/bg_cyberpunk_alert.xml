@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer Red Glow/Border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF0000" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+
+    <!-- Inner Dark Background (Inset creates the border thickness) -->
+    <item android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1A0505" /> <!-- Very dark red/black -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</layer-list>
