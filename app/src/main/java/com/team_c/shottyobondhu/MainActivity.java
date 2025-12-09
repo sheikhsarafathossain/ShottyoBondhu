@@ -26,14 +26,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize Views
+
         tvSystemStatus = findViewById(R.id.tvSystemStatus);
         tvOverlayStatus = findViewById(R.id.tvOverlayStatus);
         tvAccessibilityStatus = findViewById(R.id.tvAccessibilityStatus);
         btnOverlay = findViewById(R.id.btnOverlay);
         btnAccessibility = findViewById(R.id.btnAccessibility);
 
-        // Set Click Listeners
+
         btnOverlay.setOnClickListener(v -> requestOverlayPermission());
         btnAccessibility.setOnClickListener(v -> requestAccessibilityPermission());
     }
@@ -41,8 +41,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        // We check permissions every time the app comes into view
-        // to update the dashboard immediately after the user changes settings.
         updateDashboard();
     }
 
@@ -50,7 +48,6 @@ public class MainActivity extends Activity {
         boolean isOverlayGranted = hasOverlayPermission();
         boolean isServiceOn = isAccessibilityServiceEnabled(this, ShottyoBondhuService.class);
 
-        // Update Overlay Card
         if (isOverlayGranted) {
             tvOverlayStatus.setText("[ GRANTED ]");
             tvOverlayStatus.setTextColor(Color.parseColor("#00FF00")); // Cyber Green
@@ -65,11 +62,11 @@ public class MainActivity extends Activity {
             btnOverlay.setText("GRANT");
         }
 
-        // Update Accessibility Card
         if (isServiceOn) {
             tvAccessibilityStatus.setText("[ ACTIVE ]");
             tvAccessibilityStatus.setTextColor(Color.parseColor("#00FF00"));
-            // The button now acts as a "Disable" shortcut
+
+
             btnAccessibility.setText("DISABLE");
         } else {
             tvAccessibilityStatus.setText("[ INACTIVE ]");
@@ -77,7 +74,7 @@ public class MainActivity extends Activity {
             btnAccessibility.setText("ENABLE");
         }
 
-        // Update Main System Status
+
         if (isOverlayGranted && isServiceOn) {
             tvSystemStatus.setText("ONLINE");
             tvSystemStatus.setTextColor(Color.parseColor("#00FF00")); // Green
@@ -93,10 +90,10 @@ public class MainActivity extends Activity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             return Settings.canDrawOverlays(this);
         }
-        return true; // Pre-M devices usually grant this by default
+        return true;
     }
 
-// Helper to check if the Accessibility Service is actually running
+
     public static boolean isAccessibilityServiceEnabled(Context context, Class<?> serviceClass) {
         String accessibilityServices = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES);
 
@@ -104,7 +101,6 @@ public class MainActivity extends Activity {
 
         String serviceName = context.getPackageName() + "/" + serviceClass.getName();
 
-        // Simple standard Java split instead of the complex TextUtils one
         String[] splitServices = accessibilityServices.split(":");
 
         for (String service : splitServices) {

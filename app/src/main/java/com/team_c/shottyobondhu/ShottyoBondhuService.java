@@ -16,12 +16,12 @@ import android.widget.Toast;
 public class ShottyoBondhuService extends AccessibilityService {
 
     private WindowManager windowManager;
-    private View floatingAlertView;       // The "Fake News Detected" popup (Fixed)
-    private View floatingHighlighterView; // The Red Box (Moves to text)
+    private View floatingAlertView;
+    private View floatingHighlighterView;
     private boolean isAlertShowing = false;
 
-    // YOUR KEYWORDS HERE
-    private String[] KEYWORDS = {"fake", "fakenews", "rumor", "lie", "hoax"};
+
+    private String[] KEYWORDS = {"fake", "fakenews", "rumor", "viral", "viralnews", "Yasin Sazid"};
 
     @Override
     protected void onServiceConnected() {
@@ -32,11 +32,8 @@ public class ShottyoBondhuService extends AccessibilityService {
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
-        // --- KEY FIX ---
-        // If the alert is already open, STOP scanning.
-        // We wait until the user presses "Dismiss" to start scanning again.
+
         if (isAlertShowing) return;
-        // ----------------
 
         if (event == null) return;
 
@@ -49,7 +46,6 @@ public class ShottyoBondhuService extends AccessibilityService {
     private void checkForKeywords(AccessibilityNodeInfo node) {
         if (node == null) return;
 
-        // Double check to ensure we don't process if alert just popped up in a previous recursion
         if (isAlertShowing) return;
 
         if (node.getText() != null) {
@@ -61,10 +57,8 @@ public class ShottyoBondhuService extends AccessibilityService {
                     Rect location = new Rect();
                     node.getBoundsInScreen(location);
 
-                    // Show the Red Box
                     showHighlighter(location);
 
-                    // Show the Popup (this sets isAlertShowing = true)
                     showFixedAlert();
 
                     return;
@@ -108,6 +102,7 @@ public class ShottyoBondhuService extends AccessibilityService {
         }
     }
 
+
     private void showFixedAlert() {
         if (isAlertShowing) return;
 
@@ -131,7 +126,8 @@ public class ShottyoBondhuService extends AccessibilityService {
 
             windowManager.addView(floatingAlertView, params);
 
-            // This flag stops the scanning loop
+
+
             isAlertShowing = true;
 
         } catch (Exception e) {
@@ -148,8 +144,8 @@ public class ShottyoBondhuService extends AccessibilityService {
                 windowManager.removeView(floatingHighlighterView);
                 floatingHighlighterView = null;
             }
-            // Once everything is cleared, we set this to false
-            // to allow the scanner to start working again.
+
+
             isAlertShowing = false;
 
         } catch (Exception e) {
