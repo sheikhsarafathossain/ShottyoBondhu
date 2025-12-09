@@ -21,7 +21,7 @@ public class ShottyoBondhuService extends AccessibilityService {
     private boolean isAlertShowing = false;
 
 
-    private String[] KEYWORDS = {"fake", "fakenews", "rumor", "viral", "viralnews", "Yasin Sazid"};
+    private String[] KEYWORDS = {"fake", "fakenews", "rumor", "viral", "viralnews", "yasin"};
 
     @Override
     protected void onServiceConnected() {
