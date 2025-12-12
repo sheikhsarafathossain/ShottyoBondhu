@@ -1,3 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ShottyoBondhu</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_discover">Discover</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_profile">Profile</string>
+    
+    <!-- Home Page -->
+    <string name="check_news_title">Check News</string>
+    <string name="check_news_subtitle">Verify news articles by searching, passing links, or scanning images/screenshots. Get instant reliability results.</string>
+    <string name="scan_image_title">Scan Image to Check</string>
+    <string name="scan_image_subtitle">Upload an article screenshot\nto verify authenticity</string>
+    <string name="or_divider">OR</string>
+    <string name="paste_url_hint">Paste article URL here</string>
+    <string name="btn_verify">Verify</string>
+    <string name="articles_checked_count">You have checked 12 articles this week.</string>
+
+    <!-- Profile Page -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="achievements">Achievements</string>
+    <string name="join_quiz">Join Quiz ?</string>
+    <string name="leaderboard">Leaderboard</string>
+
+    <!-- Settings Page -->
+    <string name="accessibility_title">Accessibility</string>
+    <string name="accessibility_subtitle">Personalise in ways that work best for you</string>
+    <string name="language_bengali">বাংলায়\nঅনুবাদ করুন</string>
+    <string name="theme_label">Theme:</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+    <string name="text_size">Text Size</string>
+    <string name="permissions_title">Permissions</string>
+    <string name="display_overlay">Display Overlay</string>
+    <string name="status_missing">[Missing]</string>
+    <string name="screen_scanner">Screen Scanner</string>
+    <string name="status_inactive">[Inactive]</string>
+    <string name="btn_grant">GRANT</string>
+
+    <!-- Discovery Page -->
+    <string name="explore_title">Explore</string>
+    <string name="daily_quiz_title">Daily Quiz</string>
+    <string name="daily_quiz_subtitle">Play, earn, compete</string>
+    <string name="btn_join_quiz">Join a quiz</string>
+    <string name="explore_quizzes_title">Play,and explore exciting Quizzes !</string>
 </resources>

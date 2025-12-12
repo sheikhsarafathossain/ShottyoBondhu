@@ -1,127 +1,44 @@
 package com.team_c.shottyobondhu;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.text.TextUtils;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends Activity {
-
-    private TextView tvSystemStatus;
-    private TextView tvOverlayStatus;
-    private TextView tvAccessibilityStatus;
-    private Button btnOverlay;
-    private Button btnAccessibility;
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnItemSelectedListener(item -> {
+            Fragment selectedFragment = null;
 
-        tvSystemStatus = findViewById(R.id.tvSystemStatus);
-        tvOverlayStatus = findViewById(R.id.tvOverlayStatus);
-        tvAccessibilityStatus = findViewById(R.id.tvAccessibilityStatus);
-        btnOverlay = findViewById(R.id.btnOverlay);
-        btnAccessibility = findViewById(R.id.btnAccessibility);
-
-
-        btnOverlay.setOnClickListener(v -> requestOverlayPermission());
-        btnAccessibility.setOnClickListener(v -> requestAccessibilityPermission());
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        updateDashboard();
-    }
-
-    private void updateDashboard() {
-        boolean isOverlayGranted = hasOverlayPermission();
-        boolean isServiceOn = isAccessibilityServiceEnabled(this, ShottyoBondhuService.class);
-
-        if (isOverlayGranted) {
-            tvOverlayStatus.setText("[ GRANTED ]");
-            tvOverlayStatus.setTextColor(Color.parseColor("#00FF00")); // Cyber Green
-            btnOverlay.setEnabled(false);
-            btnOverlay.setAlpha(0.5f);
-            btnOverlay.setText("OK");
-        } else {
-            tvOverlayStatus.setText("[ MISSING ]");
-            tvOverlayStatus.setTextColor(Color.parseColor("#FF4444"));
-            btnOverlay.setEnabled(true);
-            btnOverlay.setAlpha(1.0f);
-            btnOverlay.setText("GRANT");
-        }
-
-        if (isServiceOn) {
-            tvAccessibilityStatus.setText("[ ACTIVE ]");
-            tvAccessibilityStatus.setTextColor(Color.parseColor("#00FF00"));
-
-
-            btnAccessibility.setText("DISABLE");
-        } else {
-            tvAccessibilityStatus.setText("[ INACTIVE ]");
-            tvAccessibilityStatus.setTextColor(Color.parseColor("#FF4444"));
-            btnAccessibility.setText("ENABLE");
-        }
-
-
-        if (isOverlayGranted && isServiceOn) {
-            tvSystemStatus.setText("ONLINE");
-            tvSystemStatus.setTextColor(Color.parseColor("#00FF00")); // Green
-            tvSystemStatus.setShadowLayer(20, 0, 0, Color.parseColor("#00FF00"));
-        } else {
-            tvSystemStatus.setText("OFFLINE");
-            tvSystemStatus.setTextColor(Color.parseColor("#FF4444")); // Red
-            tvSystemStatus.setShadowLayer(20, 0, 0, Color.parseColor("#FF0000"));
-        }
-    }
-
-    private boolean hasOverlayPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            return Settings.canDrawOverlays(this);
-        }
-        return true;
-    }
-
-
-    public static boolean isAccessibilityServiceEnabled(Context context, Class<?> serviceClass) {
-        String accessibilityServices = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES);
-
-        if (accessibilityServices == null) return false;
-
-        String serviceName = context.getPackageName() + "/" + serviceClass.getName();
-
-        String[] splitServices = accessibilityServices.split(":");
-
-        for (String service : splitServices) {
-            if (service.equalsIgnoreCase(serviceName)) {
-                return true;
+            // Assuming you create these fragments (ids need to match your menu)
+            int itemId = item.getItemId();
+            if (itemId == R.id.nav_home) {
+                selectedFragment = new HomeFragment();
+            } else if (itemId == R.id.nav_settings) {
+                selectedFragment = new SettingsFragment();
+            } else if (itemId == R.id.nav_discover) {
+                selectedFragment = new DiscoveryFragment();
+            } else if (itemId == R.id.nav_profile) {
+                selectedFragment = new ProfileFragment();
             }
-        }
-        return false;
-    }
 
-    private void requestOverlayPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                    Uri.parse("package:" + getPackageName()));
-            startActivity(intent);
-        }
-    }
+            if (selectedFragment != null) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, selectedFragment)
+                        .commit();
+            }
+            return true;
+        });
 
-    private void requestAccessibilityPermission() {
-        Toast.makeText(this, "Find 'ShottyoBondhu' and toggle it.", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
-        startActivity(intent);
+        // Load Home by default
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, new HomeFragment())
+                .commit();
     }
 }
