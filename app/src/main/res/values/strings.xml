@@ -37,6 +37,7 @@
     <string name="status_missing">[Missing]</string>
     <string name="screen_scanner">Screen Scanner</string>
     <string name="status_inactive">[Inactive]</string>
+    <string name="status_active">[Active]</string>
     <string name="btn_grant">GRANT</string>
 
     <!-- Discovery Page -->
@@ -45,4 +46,53 @@
     <string name="daily_quiz_subtitle">Play, earn, compete</string>
     <string name="btn_join_quiz">Join a quiz</string>
     <string name="explore_quizzes_title">Play,and explore exciting Quizzes !</string>
+
+    <!-- Missing Strings (Home) -->
+    <string name="welcome_back">Welcome back!</string>
+    <string name="your_impact">Your Impact</string>
+    <string name="stat_verified">Verified News</string>
+    <string name="stat_verified_count">12</string>
+    <string name="stat_trust">Trust Score</string>
+    <string name="stat_trust_score_value">95%</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="scan_news_action">Scan News Image</string>
+    <string name="scan_camera_desc">Use camera to verify print news</string>
+    <string name="check_link_title">Check Link</string>
+    <string name="check_link_desc">Paste a news link below to verify</string>
+    <string name="verify_now">Verify Now</string>
+    <string name="recent_activity">Recent Activity</string>
+    <string name="status_authentic">Authentic</string>
+    <string name="status_fake">Fake</string>
+    <string name="status_checked">checked: bbc.com/news...</string>
+    <string name="status_scanned">scanned: img_2025.jpg</string>
+
+    <!-- Missing Strings (Discovery) -->
+    <string name="explore_subtitle">Learn how to spot fake news</string>
+    <string name="guides_title">Guides</string>
+    <string name="guide_1_title">Spotting Misinformation</string>
+    <string name="guide_1_desc">5 tips to verify sources</string>
+    <string name="guide_2_title">Deepfake Detection</string>
+    <string name="guide_2_desc">Understanding AI media</string>
+    <string name="guide_3_title">Fact Check Tools</string>
+    <string name="guide_3_desc">Verified tech stack</string>
+    <string name="challenge_title">Challenge Yourself</string>
+    <string name="daily_quiz_desc">Test your knowledge on current events and misinformation.</string>
+    <string name="join_now">Join Now</string>
+
+    <!-- Missing Strings (Profile) -->
+    <string name="user_name_placeholder">Sarafat!</string>
+    <string name="user_level">Level 5 Fact Checker</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="view_badges_desc">View your badges and progress</string>
+    
+    <!-- Missing Strings (Settings) -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_subtitle">Manage your app preferences and permissions</string>
+    <string name="preferences_title">Preferences</string>
+    
+    <!-- Floating Widget -->
+    <string name="system_override">SYSTEM_OVERRIDE // DETECTED</string>
+    <string name="fake_news_alert">FAKE NEWS</string>
+    <string name="fake_news_desc">Algorithms indicate high probability of misinformation in the detected statement.</string>
+    <string name="dismiss_alert">[ DISMISS ALERT ]</string>
 </resources>

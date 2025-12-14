@@ -37,6 +37,7 @@ public class SettingsFragment extends Fragment {
         btnOverlay = view.findViewById(R.id.btnOverlay);
         btnAccessibility = view.findViewById(R.id.btnAccessibility);
         cvThemeCard = view.findViewById(R.id.cv_theme_card);
+        View cvLanguageCard = view.findViewById(R.id.cv_language_card);
 
         // Load saved theme preference
         SharedPreferences prefs = getContext().getSharedPreferences("AppSettings", Context.MODE_PRIVATE);
@@ -62,14 +63,28 @@ public class SettingsFragment extends Fragment {
             updateThemeText();
         });
 
+        // Language Toggle Logic
+        cvLanguageCard.setOnClickListener(v -> {
+            String currentLang = LocaleHelper.getLanguage(getContext());
+            String newLang = currentLang.equals("bn") ? "en" : "bn";
+
+            LocaleHelper.setLocale(getContext(), newLang);
+
+            // Restart Activity to apply changes
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        });
+
         return view;
     }
 
     private void updateThemeText() {
+        String themeLabel = getString(R.string.theme_label);
         if (isDarkMode) {
-            tvThemeStatus.setText("Theme: Dark");
+            tvThemeStatus.setText(themeLabel + " " + getString(R.string.theme_dark));
         } else {
-            tvThemeStatus.setText("Theme: Light");
+            tvThemeStatus.setText(themeLabel + " " + getString(R.string.theme_light));
         }
     }
 
@@ -88,23 +103,23 @@ public class SettingsFragment extends Fragment {
         boolean isServiceOn = isAccessibilityServiceEnabled(context, ShottyoBondhuService.class);
 
         if (isOverlayGranted) {
-            tvOverlayStatus.setText("Active");
+            tvOverlayStatus.setText(getString(R.string.status_active));
             tvOverlayStatus.setTextColor(Color.GREEN);
             btnOverlay.setVisibility(View.GONE); // Hide button if granted
         } else {
-            tvOverlayStatus.setText("Missing");
+            tvOverlayStatus.setText(getString(R.string.status_missing));
             tvOverlayStatus.setTextColor(Color.RED);
             btnOverlay.setVisibility(View.VISIBLE);
         }
 
         if (isServiceOn) {
-            tvAccessibilityStatus.setText("Active");
+            tvAccessibilityStatus.setText(getString(R.string.status_active));
             tvAccessibilityStatus.setTextColor(Color.GREEN);
-            btnAccessibility.setText("SETTINGS");
+            btnAccessibility.setText(getString(R.string.nav_settings));
         } else {
-            tvAccessibilityStatus.setText("Inactive");
+            tvAccessibilityStatus.setText(getString(R.string.status_inactive));
             tvAccessibilityStatus.setTextColor(Color.RED);
-            btnAccessibility.setText("GRANT");
+            btnAccessibility.setText(getString(R.string.btn_grant));
         }
     }
 
