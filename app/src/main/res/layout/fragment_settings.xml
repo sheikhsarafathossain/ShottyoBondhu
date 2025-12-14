@@ -67,15 +67,19 @@
                     android:gravity="center"
                     android:background="@drawable/bg_gradient_blue"
                     android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@android:drawable/ic_menu_sort_alphabetically"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Translate"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="20dp"
                         app:tint="@color/colorBackground"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:gravity="center"
                         android:text="@string/language_bengali"
                         android:textColor="@color/colorBackground"
                         android:textStyle="bold"
