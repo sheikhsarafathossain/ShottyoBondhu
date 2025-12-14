@@ -54,6 +54,7 @@
     <string name="stat_verified_count">12</string>
     <string name="stat_trust">Trust Score</string>
     <string name="stat_trust_score_value">95%</string>
+    <string name="translate_label">Translate</string>
     <string name="quick_actions">Quick Actions</string>
     <string name="scan_news_action">Scan News Image</string>
     <string name="scan_camera_desc">Use camera to verify print news</string>

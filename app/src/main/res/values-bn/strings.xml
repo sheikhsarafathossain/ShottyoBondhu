@@ -27,7 +27,7 @@
     <!-- Settings Page -->
     <string name="accessibility_title">অ্যাক্সেসিবিলিটি</string>
     <string name="accessibility_subtitle">আপনার প্রয়োজন অনুযায়ী পরিবর্তন করুন</string>
-    <string name="language_bengali">ইংরেজিতে\nঅনুবাদ করুন</string>
+    <string name="language_bengali">Translate\nin English</string>
     <string name="theme_label">থিম:</string>
     <string name="theme_dark">ডার্ক</string>
     <string name="theme_light">লাইট</string>
@@ -54,6 +54,7 @@
     <string name="stat_verified_count">১২</string>
     <string name="stat_trust">ট্রাস্ট স্কোর</string>
     <string name="stat_trust_score_value">৯৫%</string>
+    <string name="translate_label">Translate in English</string>
     <string name="quick_actions">কুইক অ্যাকশনস</string>
     <string name="scan_news_action">নিউজ ইমেজ স্ক্যান</string>
     <string name="scan_camera_desc">প্রিন্ট নিউজ যাচাই করতে ক্যামেরা ব্যবহার করুন</string>
@@ -61,7 +62,7 @@
     <string name="check_link_desc">যাচাই করতে নিচে নিউজ লিংক পেস্ট করুন</string>
     <string name="verify_now">এখনই যাচাই করুন</string>
     <string name="recent_activity">সাম্প্রতিক কার্যকলাপ</string>
-    <string name="status_authentic">সলিড (Authentic)</string>
+    <string name="status_authentic">বিশ্বাসযোগ্য</string>
     <string name="status_fake">ভুয়া (Fake)</string>
     <string name="status_checked">চেক করা: bbc.com/news...</string>
     <string name="status_scanned">স্ক্যান করা: img_2025.jpg</string>
@@ -91,8 +92,8 @@
     <string name="preferences_title">পছন্দসমূহ</string>
 
     <!-- Floating Widget -->
-    <string name="system_override">SYSTEM_OVERRIDE // DETECTED</string>
-    <string name="fake_news_alert">FAKE NEWS</string>
+    <string name="system_override">সিস্টেম নিয়ন্ত্রণ // শনাক্ত হয়েছে</string>
+    <string name="fake_news_alert">ভুয়া খবর</string>
     <string name="fake_news_desc">অ্যালগরিদম শনাক্ত করেছে যে এই তথ্যে ভুল থাকার উচ্চ সম্ভাবনা রয়েছে।</string>
     <string name="dismiss_alert">[ ডিসমিস অ্যালার্ট ]</string>
 </resources>
