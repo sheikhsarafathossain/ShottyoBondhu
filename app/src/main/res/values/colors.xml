@@ -25,7 +25,7 @@
     
     <!-- Status Colors -->
     <color name="orange">#FF9800</color>
-    <color name="green_grant">#FFCDD2</color> <!-- Kept from original, might need update -->
+    <color name="green_grant">#FF0014</color> <!-- Kept from original, might need update -->
     <color name="btn_scan_start">#6C63FF</color>
     <color name="btn_scan_end">#64B5F6</color>
 

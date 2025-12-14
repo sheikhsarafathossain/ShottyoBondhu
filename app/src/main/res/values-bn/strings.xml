@@ -63,7 +63,7 @@
     <string name="verify_now">এখনই যাচাই করুন</string>
     <string name="recent_activity">সাম্প্রতিক কার্যকলাপ</string>
     <string name="status_authentic">বিশ্বাসযোগ্য</string>
-    <string name="status_fake">ভুয়া (Fake)</string>
+    <string name="status_fake">ভুয়া</string>
     <string name="status_checked">চেক করা: bbc.com/news...</string>
     <string name="status_scanned">স্ক্যান করা: img_2025.jpg</string>
 
