@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Daily Quiz"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:text="Test your fact-checking skills!"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/colorCardSurface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Which tool helps verify an image source?"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+                    <RadioButton
+                        android:id="@+id/rb_q1_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reverse Image Search"
+                        android:buttonTint="@color/colorTextPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+                    <RadioButton
+                        android:id="@+id/rb_q1_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zooming in 10x"
+                        android:buttonTint="@color/colorTextPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+                    <RadioButton
+                        android:id="@+id/rb_q1_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Applying a filter"
+                        android:buttonTint="@color/colorTextPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/colorCardSurface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. A credible news URL usually follows standard domains (e.g., .com, .org)."
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+                    <RadioButton
+                        android:id="@+id/rb_q2_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="True"
+                        android:buttonTint="@color/colorTextPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+                    <RadioButton
+                        android:id="@+id/rb_q2_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="False"
+                        android:buttonTint="@color/colorTextPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/colorCardSurface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. 'Clickbait' headlines are designed to be..."
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_q3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+                    <RadioButton
+                        android:id="@+id/rb_q3_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Accurate and boring"
+                        android:buttonTint="@color/colorTextPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+                    <RadioButton
+                        android:id="@+id/rb_q3_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sensational and misleading"
+                        android:buttonTint="@color/colorTextPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+                    <RadioButton
+                        android:id="@+id/rb_q3_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Short and concise"
+                        android:buttonTint="@color/colorTextPrimary"
+                        android:textColor="@color/colorTextPrimary"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_submit_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Submit Answers"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_primary"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

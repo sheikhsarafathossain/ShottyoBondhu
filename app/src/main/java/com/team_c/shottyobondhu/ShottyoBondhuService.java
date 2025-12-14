@@ -20,8 +20,7 @@ public class ShottyoBondhuService extends AccessibilityService {
     private View floatingHighlighterView;
     private boolean isAlertShowing = false;
 
-
-    private String[] KEYWORDS = {"fake", "fakenews", "rumor", "viral", "viralnews", "yasin"};
+    private String[] KEYWORDS = {"fake", "fakenews", "rumor", "viral", "viralnews", "sarafat"};
 
     @Override
     protected void onServiceConnected() {
