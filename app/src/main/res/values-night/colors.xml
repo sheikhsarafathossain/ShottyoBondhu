@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7C4DFF</color> <!-- Slightly lighter purple for dark mode visibility -->
+    <color name="colorBackground">#121212</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#FFFFFF</color> <!-- Invert black to white for icons/text using this ref -->
+    <color name="gray_text">#B0B0B0</color>
+    <color name="light_gray_background">#1E1E1E</color>
+    
+    <!-- Gradients and Accents -->
+    <color name="blue_gradient_start">#6C63FF</color>
+    <color name="blue_gradient_end">#64B5F6</color>
+    <color name="purple_accent">#E040FB</color>
+    <color name="purple_gradient_start">#7B1FA2</color>
+    <color name="purple_gradient_end">#E040FB</color>
+    
+    <!-- Card Colors - keeping them slightly muted or same? Modern designs keep them but maybe less bright -->
+    <color name="card_blue_bg">#3F51B5</color>
+    <color name="card_purple_bg">#7B1FA2</color>
+    <color name="card_green_bg">#00695C</color>
+    
+    <!-- Button Colors -->
+    <color name="btn_verify_text">#82B1FF</color>
+    <color name="btn_verify_stroke">#82B1FF</color>
+    
+    <!-- Status Colors -->
+    <color name="orange">#FFB74D</color>
+    <color name="green_grant">#EF5350</color> 
+    <color name="btn_scan_start">#6C63FF</color>
+    <color name="btn_scan_end">#64B5F6</color>
+
+    <!-- Modern UI Colors - The KEY changes -->
+    <color name="colorSurface">#121212</color> <!-- Dark Background -->
+    <color name="colorTextPrimary">#FFFFFF</color> <!-- White Text -->
+    <color name="colorTextSecondary">#B0B0B0</color> <!-- Light Gray Text -->
+    <color name="colorSuccess">#69F0AE</color>
+    <color name="colorCardSurface">#1E1E1E</color> <!-- Dark Card Background -->
+</resources>

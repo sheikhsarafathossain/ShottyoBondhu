@@ -14,6 +14,13 @@ public class DiscoveryFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_discovery, container, false);
+        View view = inflater.inflate(R.layout.fragment_discovery, container, false);
+
+        view.findViewById(R.id.btn_join_quiz).setOnClickListener(v -> {
+            android.content.Intent intent = new android.content.Intent(getActivity(), QuizActivity.class);
+            startActivity(intent);
+        });
+
+        return view;
     }
 }

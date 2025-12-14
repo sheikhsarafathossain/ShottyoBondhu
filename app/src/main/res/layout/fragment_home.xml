@@ -1,245 +1,396 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/colorSurface"
+    android:fillViewport="true">
 
-    <!-- Header Section -->
-    <View
-        android:id="@+id/header_bg"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:background="@drawable/bg_header_curve"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Placeholder for the Illustration -->
-    <!-- Ideally this would be an ImageView with the illustration resource -->
-    <ImageView
-        android:id="@+id/iv_illustration"
-        android:layout_width="240dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="-30dp"
-        android:layout_marginEnd="-25dp"
-        android:src="@drawable/ic_header_puzzle"
-        app:srcCompat="@drawable/ic_header_puzzle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <!-- Content Section -->
-    <TextView
-        android:id="@+id/tv_check_news_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="24dp"
-        android:text="@string/check_news_title"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_bg" />
-        
-    <View
-        android:layout_width="4dp"
-        android:layout_height="0dp"
-        android:background="@color/purple_accent"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_check_news_title"
-        app:layout_constraintEnd_toStartOf="@+id/tv_check_news_title"
-        app:layout_constraintTop_toTopOf="@+id/tv_check_news_title"/>
-
-    <TextView
-        android:id="@+id/tv_check_news_subtitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/check_news_subtitle"
-        android:textColor="@color/gray_text"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_check_news_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_check_news_title" />
-
-    <!-- Scan Card -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_scan"
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="24dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_check_news_subtitle">
-
-        <!-- Gradient Background Simulation or actual drawable usage -->
-        <!-- Doing a simple gradient via XML would be better, but using blue color for now -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#6B62FD">
-
-            <!-- Simple Camera Icon Placeholder -->
-             <ImageView
-                android:id="@+id/iv_camera_icon"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="32dp"
-                android:src="@android:drawable/ic_menu_camera"
-                app:tint="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:text="@string/scan_image_title"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tv_scan_subtitle"
-                app:layout_constraintStart_toEndOf="@+id/iv_camera_icon"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed" />
-
-            <TextView
-                android:id="@+id/tv_scan_subtitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="16dp"
-                android:text="@string/scan_image_subtitle"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/iv_camera_icon"
-                app:layout_constraintTop_toBottomOf="@+id/iv_camera_icon" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/tv_or"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/or_divider"
-        android:textColor="@color/gray_text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_scan" />
-
-    <!-- URL Input Section -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_link_check"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="2dp"
-        app:cardBackgroundColor="#6B62FD"
-        app:layout_constraintTop_toBottomOf="@+id/tv_or">
+        android:paddingBottom="24dp">
 
-        <LinearLayout
+        <!-- Header Section -->
+        <TextView
+            android:id="@+id/tv_welcome_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Welcome back!"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sarafat!"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_welcome_label"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome_label" />
+
+        <!-- Profile Picture Placeholder -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_welcome_label">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/card_purple_bg"
+                android:src="@android:drawable/ic_menu_myplaces"
+                app:tint="@color/colorPrimary"
+                android:padding="8dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Hero Stats Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_hero_stats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="24dp">
-            
-            <!-- Input Field Container -->
-            <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@color/white">
-                
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="16dp">
-                    
-                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@android:drawable/ic_menu_mapmode"
-                        app:tint="#6A61FB" />
+                android:background="@drawable/bg_gradient_hero"
+                android:padding="24dp">
 
-                    <EditText
-                        android:id="@+id/et_url_input"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@null"
-                        android:hint="Paste URL here"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:paddingStart="12dp"
-                        android:inputType="textUri" />
-                        
-                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@android:drawable/ic_menu_edit"
-                        app:tint="#6C63FF"/>
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_hero_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Impact"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            </androidx.cardview.widget.CardView>
+                <!-- Stat 1 -->
+                <TextView
+                    android:id="@+id/tv_stat_1_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="12"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hero_title" />
 
-            <!-- Verify Button -->
-            <Button
-                android:id="@+id/btn_verify"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verified News"
+                    android:textColor="#E1BEE7"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_stat_1_count" />
+
+                <!-- Vertical Divider -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:alpha="0.4"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_stat_1_count"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_stat_1_count" />
+
+                <!-- Stat 2 -->
+                <TextView
+                    android:id="@+id/tv_stat_2_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="95%"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hero_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trust Score"
+                    android:textColor="#E1BEE7"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_stat_2_count" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Main Action Cards Title -->
+        <TextView
+            android:id="@+id/tv_actions_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Quick Actions"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_hero_stats" />
+
+        <!-- Scan Card (Full Width) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scan_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_actions_label">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="16dp"
-                android:text="@string/btn_verify"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:background="@drawable/bg_button_verify"
-                app:backgroundTint="@null"
-                android:paddingHorizontal="32dp"
-                android:paddingVertical="10dp"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                android:padding="20dp"
+                android:background="@drawable/bg_card_modern">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/iv_scan"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_camera"
+                    app:tint="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/articles_checked_count"
-        android:textColor="@color/gray_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_link_check" />
+                <TextView
+                    android:id="@+id/tv_scan_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Scan News Image"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_scan"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Use camera to verify print news"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_scan"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_scan_title" />
+
+                 <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:tint="@color/gray_text"
+                    android:rotation="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Link Input and Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_link_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/colorCardSurface"
+            app:layout_constraintTop_toBottomOf="@+id/cv_scan_action">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_link"
+                     android:layout_width="32dp"
+                     android:layout_height="32dp"
+                     android:src="@android:drawable/ic_menu_mapmode"
+                     app:tint="@color/colorPrimary"
+                     android:layout_marginBottom="12dp"/>
+                     
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check Link"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paste a news link below to verify"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextSecondary"
+                    android:layout_marginBottom="16dp"/>
+
+                <EditText
+                    android:id="@+id/et_url_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_white_rounded"
+                    android:paddingHorizontal="16dp"
+                    android:hint="https://example.com/news..."
+                    android:inputType="textUri"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="#9E9E9E"
+                    android:backgroundTint="#F5F5F5"/>
+
+                <Button
+                    android:id="@+id/btn_verify_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Verify Now"
+                    android:background="@drawable/bg_button_primary"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Recent Activity Header -->
+        <TextView
+            android:id="@+id/tv_recent_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Recent Activity"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_link_action" />
+
+        <!-- Empty State / Placeholder for Recent Activity -->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:layout_marginHorizontal="24dp"
+             android:layout_marginTop="16dp"
+             app:layout_constraintTop_toBottomOf="@+id/tv_recent_label">
+             
+             <!-- Item 1 -->
+             <include layout="@layout/layout_highlighter" android:visibility="gone"/> <!-- Just dummy usage/reference -->
+             
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:padding="16dp"
+                 android:layout_marginBottom="12dp"
+                 android:background="@drawable/bg_card_modern">
+                 
+                 <TextView
+                     android:id="@+id/tv_recent_1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="checked: bbc.com/news..."
+                     android:textColor="@color/colorTextPrimary"
+                     android:textStyle="bold"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"/>
+                     
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Nov 24, 2:30 PM"
+                     android:textSize="12sp"
+                     android:textColor="@color/colorTextSecondary"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/tv_recent_1"/>
+                     
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Authentic"
+                     android:textColor="@color/colorSuccess"
+                     android:textStyle="bold"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"/>
+                     
+             </androidx.constraintlayout.widget.ConstraintLayout>
+             
+              <!-- Item 2 -->
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:padding="16dp"
+                 android:background="@drawable/bg_card_modern">
+                 
+                 <TextView
+                     android:id="@+id/tv_recent_2"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="scanned: img_2025.jpg"
+                     android:textColor="@color/colorTextPrimary"
+                     android:textStyle="bold"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"/>
+                     
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Nov 23, 10:15 AM"
+                     android:textSize="12sp"
+                     android:textColor="@color/colorTextSecondary"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/tv_recent_2"/>
+                     
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Fake"
+                     android:textColor="@color/green_grant"
+                     android:textStyle="bold"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"/>
+                     
+             </androidx.constraintlayout.widget.ConstraintLayout>
+             
+         </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
