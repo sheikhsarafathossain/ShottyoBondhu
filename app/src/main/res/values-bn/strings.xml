@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">সত্যবন্ধু</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">হোম</string>
+    <string name="nav_discover">ডিসকভার</string>
+    <string name="nav_settings">সেটিংস</string>
+    <string name="nav_profile">প্রোফাইল</string>
+    
+    <!-- Home Page -->
+    <string name="check_news_title">নিউজ যাচাই</string>
+    <string name="check_news_subtitle">লিংক বা ছবি স্ক্যান করে খবরের সত্যতা যাচাই করুন। তাৎক্ষণিক ফলাফল পান।</string>
+    <string name="scan_image_title">ছবি স্ক্যান</string>
+    <string name="scan_image_subtitle">আর্টিকেলের স্ক্রিনশট আপলোড করে\nসত্যতা যাচাই করুন</string>
+    <string name="or_divider">অথবা</string>
+    <string name="paste_url_hint">আর্টিকেলের লিংক পেস্ট করুন</string>
+    <string name="btn_verify">যাচাই করুন</string>
+    <string name="articles_checked_count">আপনি এই সপ্তাহে ১২টি আর্টিকেল যাচাই করেছেন।</string>
+
+    <!-- Profile Page -->
+    <string name="dashboard_title">ড্যাশবোর্ড</string>
+    <string name="achievements">অর্জনসমূহ</string>
+    <string name="join_quiz">কুইজে অংশ নিন ?</string>
+    <string name="leaderboard">লিডারবোর্ড</string>
+
+    <!-- Settings Page -->
+    <string name="accessibility_title">অ্যাক্সেসিবিলিটি</string>
+    <string name="accessibility_subtitle">আপনার প্রয়োজন অনুযায়ী পরিবর্তন করুন</string>
+    <string name="language_bengali">ইংরেজিতে\nঅনুবাদ করুন</string>
+    <string name="theme_label">থিম:</string>
+    <string name="theme_dark">ডার্ক</string>
+    <string name="theme_light">লাইট</string>
+    <string name="text_size">টেক্সট সাইজ</string>
+    <string name="permissions_title">পারমিশন</string>
+    <string name="display_overlay">ডিসপ্লে ওভারলে</string>
+    <string name="status_missing">[অনুপস্থিত]</string>
+    <string name="screen_scanner">স্ক্রিন স্ক্যানার</string>
+    <string name="status_inactive">[নিষ্ক্রিয়]</string>
+    <string name="status_active">[সক্রিয়]</string>
+    <string name="btn_grant">অনুমতি দিন</string>
+
+    <!-- Discovery Page -->
+    <string name="explore_title">অন্বেষণ</string>
+    <string name="daily_quiz_title">দৈনিক কুইজ</string>
+    <string name="daily_quiz_subtitle">খেলুন, জিতুন, এবং শিখুন</string>
+    <string name="btn_join_quiz">কুইজে যোগ দিন</string>
+    <string name="explore_quizzes_title">মজার কুইজ খেলুন এবং জানুন!</string>
+
+    <!-- Missing Strings (Home) -->
+    <string name="welcome_back">স্বাগতম আবার!</string>
+    <string name="your_impact">আপনার প্রভাব</string>
+    <string name="stat_verified">যাচাইকৃত খবর</string>
+    <string name="stat_verified_count">১২</string>
+    <string name="stat_trust">ট্রাস্ট স্কোর</string>
+    <string name="stat_trust_score_value">৯৫%</string>
+    <string name="quick_actions">কুইক অ্যাকশনস</string>
+    <string name="scan_news_action">নিউজ ইমেজ স্ক্যান</string>
+    <string name="scan_camera_desc">প্রিন্ট নিউজ যাচাই করতে ক্যামেরা ব্যবহার করুন</string>
+    <string name="check_link_title">লিংক চেক</string>
+    <string name="check_link_desc">যাচাই করতে নিচে নিউজ লিংক পেস্ট করুন</string>
+    <string name="verify_now">এখনই যাচাই করুন</string>
+    <string name="recent_activity">সাম্প্রতিক কার্যকলাপ</string>
+    <string name="status_authentic">সলিড (Authentic)</string>
+    <string name="status_fake">ভুয়া (Fake)</string>
+    <string name="status_checked">চেক করা: bbc.com/news...</string>
+    <string name="status_scanned">স্ক্যান করা: img_2025.jpg</string>
+
+    <!-- Missing Strings (Discovery) -->
+    <string name="explore_subtitle">ভুয়া খবর চেনার উপায় জানুন</string>
+    <string name="guides_title">গাইডস</string>
+    <string name="guide_1_title">মিথ্যা তথ্য সনাক্তকরণ</string>
+    <string name="guide_1_desc">উৎস যাচাই করার ৫টি টিপস</string>
+    <string name="guide_2_title">ডিফফেক ডিটেকশন</string>
+    <string name="guide_2_desc">এআই মিডিয়া বোঝা</string>
+    <string name="guide_3_title">ফ্যাক্ট চেক টুলস</string>
+    <string name="guide_3_desc">যাচাইকৃত টেক স্ট্যাক</string>
+    <string name="challenge_title">চ্যালেঞ্জ নিন</string>
+    <string name="daily_quiz_desc">বর্তমান ঘটনা এবং ভুয়া খবরের উপর আপনার জ্ঞান পরীক্ষা করুন।</string>
+    <string name="join_now">এখনই যোগ দিন</string>
+
+    <!-- Missing Strings (Profile) -->
+    <string name="user_name_placeholder">শারাফাত!</string>
+    <string name="user_level">লেভেল ৫ ফ্যাক্ট চেকার</string>
+    <string name="edit_profile">প্রোফাইল এডিট</string>
+    <string name="view_badges_desc">আপনার ব্যাজ এবং অগ্রগতি দেখুন</string>
+    
+    <!-- Missing Strings (Settings) -->
+    <string name="settings_title">সেটিংস</string>
+    <string name="settings_subtitle">আপনার অ্যাপ পছন্দ এবং অনুমতি পরিচালনা করুন</string>
+    <string name="preferences_title">পছন্দসমূহ</string>
+
+    <!-- Floating Widget -->
+    <string name="system_override">SYSTEM_OVERRIDE // DETECTED</string>
+    <string name="fake_news_alert">FAKE NEWS</string>
+    <string name="fake_news_desc">অ্যালগরিদম শনাক্ত করেছে যে এই তথ্যে ভুল থাকার উচ্চ সম্ভাবনা রয়েছে।</string>
+    <string name="dismiss_alert">[ ডিসমিস অ্যালার্ট ]</string>
+</resources>

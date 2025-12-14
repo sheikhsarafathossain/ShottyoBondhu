@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="Settings"
+            android:text="@string/settings_title"
             android:textColor="@color/colorTextPrimary"
             android:textSize="28sp"
             android:textStyle="bold" />
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="4dp"
-            android:text="Manage your app preferences and permissions"
+            android:text="@string/settings_subtitle"
             android:textColor="@color/colorTextSecondary"
             android:textSize="14sp"/>
 
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginStart="24dp"
-            android:text="Preferences"
+            android:text="@string/preferences_title"
             android:textColor="@color/colorTextPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -50,6 +50,7 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_language_card"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
@@ -182,7 +183,7 @@
                         android:id="@+id/btnOverlay"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Allow"
+                        android:text="@string/btn_grant"
                         android:textColor="@color/white"
                         android:background="@drawable/bg_gradient_blue"
                         android:paddingHorizontal="24dp"
@@ -237,7 +238,7 @@
                         android:id="@+id/btnAccessibility"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Allow"
+                        android:text="@string/btn_grant"
                         android:textColor="@color/white"
                         android:background="@drawable/bg_gradient_blue"
                         android:paddingHorizontal="24dp"
