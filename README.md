@@ -1,5 +1,7 @@
 # ShottyoBondhu (সত্যবন্ধু) - True Friend
 
+Prototype Link: https://www.canva.com/design/DAG7ahCUVN8/MqXlHuhKg47OUeQ3qUygtQ/view?utm_content=DAG7ahCUVN8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ea471a0cc
+
 **ShottyoBondhu** is an Android application designed to be a digital companion, focusing on combating misinformation (fake news) and providing accessibility support for users. ("Shottyo" implies Truth/Real, "Bondhu" implies Friend).
 
 ## 🚀 Features
